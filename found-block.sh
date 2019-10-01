@@ -1,5 +1,4 @@
 #!/bin/bash
-
 _walletDir=$(dirname $0);
 
 if [[ ! -z $@ ]];

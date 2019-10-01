@@ -27,6 +27,10 @@ _walletCli="${_walletDir}/arcticcoin-cli.sh";         # Path to your wallet-cli 
 _logFile='${_walletDir}/debug.log';                   # Path to your arcticcoin log-file path (usually it's in same directory)
 ```
 
+4.1 $>
+Make sh-scripts executeable and 'install' them in upper-dir (../ -> arcticcoin-wallet directory if installing in sub-dir)
+$> chmod +x ./*.sh && ln -s ./*.sh ../
+
 #### Keeping disk-usage small ...
 Setup BTRFS or ZFS File-System enabling compression and deduplication (detail setup not included atm.)
 but BTRFS has been used in practice for about 12 month now by me without any issues!

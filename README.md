@@ -15,11 +15,13 @@ or by downloading this repo as ZIP-file.
 ### Insights
 
 #### Setup this toolset
-Add this line to your arcticcoin.conf file (changing the given path if required!)
+1. Add this line to your arcticcoin.conf file (changing the given path if required!)
 ```
 blocknotify=/opt/wallets/arcticcoin/toolset/found-block.sh "%s"
 ```
-Edit watchdog.sh and edit path's for:
+
+2. Copy or rename watchdog.conf~dist to watchdog.conf
+3. Edit watchdog.conf and edit path's for:
 ```
 _walletCli="${_walletDir}/arcticcoin-cli.sh";         # Path to your wallet-cli binary (f.e. bin/arcticcoin-cli)
 _logFile='${_walletDir}/debug.log';                   # Path to your arcticcoin log-file path (usually it's in same directory)

@@ -1,5 +1,5 @@
 #!/bin/bash
-_walletDir=$(dirname $0);
+_walletDir=$(realpath $(dirname $(dirname $0)));
 
 # Defaults
 _checkLastEntries=100000;

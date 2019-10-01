@@ -1,11 +1,13 @@
 #!/bin/bash
 _walletDir=$(dirname $0);
-_walletCli="${_walletDir}/arcticcoin-cli.sh";
-_logFile='/var/lib/blockchain/arcticcoin/debug.log';
-_badBlockLog="${_walletDir}/bad-block.notify";
 
+# Defaults
 _checkLastEntries=100000;
 _quiet=false;
+_badBlockLog="${_walletDir}/bad-block.notify";
+
+# Read watchdog.conf
+source ${_walletDir}/$(basename ${0%.*}).conf;
 
 if [ ! -f "${_logFile}" ];
 then

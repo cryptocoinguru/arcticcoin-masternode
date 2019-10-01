@@ -1,0 +1,7 @@
+_walletCli="${_walletDir}/arcticcoin-cli.sh";
+_logFile='/var/lib/blockchain/arcticcoin/debug.log';
+
+# Optionally comment out these if desired
+#---------------------------------------------------
+# _checkLastEntries=100000;
+# _quiet=false;

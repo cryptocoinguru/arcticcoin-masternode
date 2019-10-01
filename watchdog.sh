@@ -42,7 +42,7 @@ function checkBlock()
         if [[ ! -f ${_badBlockLog} ]];
         then
           echo "Creating new bad-block-log (${_badBlockLog})";
-        elif [[ $(grep -c '00000000005e77053692c3015138ec21481c96dd6a7ed4af09aef6cc05a8b605' ${_badBlockLog}) > 0 ]];
+        elif [[ $(grep -c "${block}" ${_badBlockLog}) > 0 ]];
         then
            # Skip blocks already skipped
            return 1;

@@ -10,7 +10,7 @@ _quiet=false;
 if [ ! -f "${_logFile}" ];
 then
   echo "Logfile does not exist. Skipping.";
-  exit 0;
+  exit 1;
 fi
 
 if [[ $@ == *"-q"* ]];

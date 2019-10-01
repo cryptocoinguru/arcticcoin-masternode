@@ -34,9 +34,6 @@ function echoLog()
 function checkBlock()
 {
   while read -r block ; do
-#    block=$( echo "$line" | grep "InvalidChainFound: invalid block=" | grep -Po '[A-Za-z\d]{64}' )
-#    if [ $? = 0 ] && [ ! -z "${block}" ];
-
     if [ ! -z "${block}" ];
     then
         if [[ ! -f ${_badBlockLog} ]];

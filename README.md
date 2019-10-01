@@ -14,10 +14,23 @@ or by downloading this repo as ZIP-file.
 
 ### Insights
 
-Add this line to your arcticcoin.conf file
+#### Setup this toolset
+Add this line to your arcticcoin.conf file (changing the given path if required!)
 ```
 blocknotify=/opt/wallets/arcticcoin/toolset/found-block.sh "%s"
 ```
+Edit watchdog.sh and edit path's for:
+```
+_walletCli="${_walletDir}/arcticcoin-cli.sh";         # Path to your wallet-cli binary (f.e. bin/arcticcoin-cli)
+_logFile='${_walletDir}/debug.log';                   # Path to your arcticcoin log-file path (usually it's in same directory)
+```
+
+#### Keeping disk-usage small ...
+Setup BTRFS or ZFS File-System enabling compression and deduplication (detail setup not included atm.)
+but BTRFS has been used in practice for about 12 month now by me without any issues!
+
+For this purpose I've been using daemon with '-datadir=' argument pointing f.e. to /var/lib/blockchain/arcticcoin
+using BTRFS on that mount-point (/var/lib/blockchain/ -> BTRFS or ZFS Storage-Root)
 
 ## Security hints
 Don't run your wallet's as root-user as this can be a potential security risk!
